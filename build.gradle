@@ -10,8 +10,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.35'
+    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.35'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
 }
 task(runMain, dependsOn: 'classes', type: JavaExec) {
     main = 'Testo'
@@ -19,5 +20,5 @@ task(runMain, dependsOn: 'classes', type: JavaExec) {
 }
 
 test {
-    useJUnitPlatform()
+    useTestNG()
 }
