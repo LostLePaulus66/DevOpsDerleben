@@ -21,7 +21,7 @@ public class TestoTest {
     public void FizzBuzzFiveNumbers() {
 
         Testo fb = new Testo();
-        Assert.assertEquals("Buzz", fb.convert(6));
+        Assert.assertEquals("Buzz", fb.convert(5));
     }
 
     @Test
